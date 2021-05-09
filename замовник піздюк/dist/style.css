@@ -4,6 +4,12 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.row1200 {
+  max-width: 98%;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 header {
   width: 100%;
   max-height: 100px;
@@ -71,8 +77,21 @@ header .menu_wrapper ul {
   justify-content: space-evenly;
 }
 header .menu_wrapper ul a {
-  color: black;
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  overflow: hidden;
+  background: linear-gradient(to right, #00897b, #00897b 50%, #050505 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
   text-decoration: none;
+}
+header .menu_wrapper ul a:hover {
+  background-position: 0 100%;
 }
 @media (max-width: 900px) {
   header .menu_wrapper {
@@ -165,6 +184,7 @@ header .menu_wrapper ul a {
   color: white;
   border: 2px solid white;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 .title_wrapper .title_button a:hover {
   background-color: #00897b;
@@ -179,17 +199,12 @@ header .menu_wrapper ul a {
   }
 }
 .about_us_wrapper {
-  min-height: 70vh;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 50px 0;
 }
 .about_us_wrapper .title_about_us {
-  margin: auto;
   text-align: center;
   max-width: 700px;
-  height: 50%;
+  margin: 0 auto 100px;
   display: flex;
   align-items: center;
 }
@@ -228,12 +243,12 @@ header .menu_wrapper ul a {
 .our_services_wrapper {
   min-height: 100vh;
   background-color: #e4fdf9;
-  padding: 10px;
+  padding: 50px;
 }
 .our_services_wrapper .title_our_services_wrapper {
   text-align: center;
   max-width: 500px;
-  margin: auto;
+  margin: 100px auto;
 }
 .our_services_wrapper .item_our_services {
   display: flex;
@@ -281,4 +296,159 @@ header .menu_wrapper ul a {
 }
 .our_services_wrapper .item_our_services .item_os:hover {
   background-color: #00897b;
+  transform: scale(1.1);
+  transition: 1s;
+}
+.latest_work_wrapper {
+  min-height: 100vh;
+  padding: 10px;
+}
+.latest_work_wrapper .title_latest_works {
+  text-align: center;
+  max-width: 500px;
+  margin: 100px auto;
+}
+.latest_work_wrapper .img_block_wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.latest_work_wrapper .img_block_wrapper img {
+  margin: 10px;
+}
+@media (max-width: 400px) {
+  .latest_work_wrapper .img_block_wrapper img {
+    width: 250px;
+  }
+}
+.latest_work_wrapper .button_latest {
+  width: 100%;
+  text-align: center;
+  min-height: 80px;
+  padding: 10px;
+}
+.latest_work_wrapper .button_latest a {
+  text-decoration: none;
+  margin: 10px;
+  background: none;
+  color: black;
+  border: 2px solid #00897b;
+  font-weight: bold;
+  min-width: 150px;
+  padding: 10px;
+  display: inline-block;
+}
+.latest_work_wrapper .button_latest a.active {
+  background-color: #00897b;
+}
+.latest_work_wrapper .button_latest a:hover {
+  background-color: #00897b;
+  color: white;
+  transition: 2s;
+}
+.latest_work_wrapper .view_button_wrapper {
+  text-align: center;
+  margin: 100px;
+}
+.latest_work_wrapper .view_button_wrapper a {
+  background-color: #00897b;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #00897b;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+}
+.pricing_plan_wrapper {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #bccecb;
+}
+.pricing_plan_wrapper .title_pricing_plan {
+  text-align: center;
+  max-width: 500px;
+  margin: 100px auto;
+  font-size: 20px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item {
+  background-color: white;
+  height: 500px;
+  width: 300px;
+  margin: 20px;
+  transition: 1s;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 1px 1px 20px 5px black;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .header_price_block {
+  background-color: #3949ab;
+  width: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .header_price_block p {
+  font-size: 20px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .header_price_block p span {
+  font-size: 50px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .header_price_block p span sup {
+  font-size: 20px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .header_price_block::after {
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 426px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 30px solid #fff;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block {
+  text-align: center;
+  height: 60%;
+  padding: 30px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block ul {
+  height: 80%;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block ul li {
+  list-style-type: none;
+  margin: 20px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block ul li p {
+  margin: auto;
+  max-width: 150px;
+  border-bottom: 2px solid gray;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid  black;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  min-width: 150px;
+}
+.pricing_plan_wrapper .pricing_item_wrapper .pricing_item .main_price_block a:hover {
+  background-color: #00897b;
+  color: white;
+  border: white;
 }
