@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+    <div class="modal_window_wrapper">
+        <div class="modal_window">
+            <form>
+                <div class="form_header">
+                    <label>
+                        Заява №
+                        <input type="number" required>
+                    </label>
+                    <label>від <input type="date" required>
+                    </label>
+
+                </div>
+                <div class="for_info">
+                    <div class="main_inp">
+                        <label>
+                            <p>Назва замовника</p>
+                            <input type="text" disabled data-name="Назва замовника">
+                        </label>
+                        <label>
+                            <p> Адреса замовника</p>
+                            <input type="text" disabled data-name="Адреса замовника">
+                        </label>
+                        <label>
+                            <p>Назва обєкта</p>
+                            <input type="text" disabled data-name="Назва обєкта">
+                        </label>
+                        <label>
+                            <p>Місцезнаходження обєкта</p>
+                            <input type="text" disabled data-name="Місцезнаходження обєкта">
+                        </label>
+                        <label>
+                            <p>Призначення обєкта</p>
+                            <input type="text" disabled data-name="Призначення обєкта">
+                        </label>
+                    </div>
+
+
+                    <button id="edit">Редагувати</button>
+
+
+                </div>
+                <div class="power_wrapper">
+                    <label>
+                        1 кат.
+                        <input id="firstKVT" onchange="sumKvtFunc(event)" type="number">
+                        кВт;
+                    </label>
+                    <label>
+                        2 кат.
+                        <input id="secondKVT" onchange="sumKvtFunc(event)" type="number">
+                        кВт;
+                    </label>
+                    <label>
+                        3 кат.
+                        <input id="threeKVT" onchange="sumKvtFunc(event)" type="number">
+                        кВт;
+                    </label>
+                    <label>
+                        Сумарна потужність
+                        <input id="sumKVT" type="number" disabled>
+                        кВт;
+                    </label>
+                    
+                </div>
+
+                <div class="listbox">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                          <option>Перелік причин видачі ТУ</option>
+                        </select>
+                        <div class="overSelect"></div>
+                      </div>
+                      <div id="checkboxes">
+                        <label for="one">
+                          <input type="checkbox" value="Нове приєднання" id="one" />Нове приєднання</label>
+                        <label for="two">
+                          <input type="checkbox" value="Збільшення потужності" id="two" />Збільшення потужності</label>
+                        <label for="three">
+                          <input type="checkbox" value="Зміна напруги приєднання" id="three" />Зміна напруги приєднання</label>
+                          <label for="four">
+                            <input type="checkbox" value="Зміна власника" id="four" />Зміна власника</label>
+                      </div>
+
+                </div>
+
+                <input value="Зберегти" id="first_save" type="submit">
+
+
+            </form>
+
+            <div class="second_form_wrapper">
+                <div class="second_form">
+                    <form>
+                        <div class="second_main_inp">
+                            <label>
+                                <p>Назва замовника</p>
+                                <input type="text" data-name="Назва замовника">
+                            </label>
+                            <label>
+                                <p> Адреса замовника</p>
+                                <input type="text" data-name="Адреса замовника">
+                            </label>
+                            <label>
+                                <p>Назва обєкта</p>
+                                <input type="text" data-name="Назва обєкта">
+                            </label>
+                            <label>
+                                <p>Місцезнаходження обєкта</p>
+                                <input type="text" data-name="Місцезнаходження обєкта">
+                            </label>
+                            <label>
+                                <p>Призначення обєкта</p>
+                                <input type="text" data-name="Призначення обєкта">
+                            </label>
+                        </div>
+                        <div class="sec_but_wrapper">
+                            <input type="submit" id="save" value="Зберегти">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="button_wrapper">
+        <button onclick="showModal(event)">
+            Нове
+        </button>
+    </div>
+    <div class="table_wrapper">
+        <table cellspacing="0" cols="5">
+            <thead>
+                <tr>
+                    <th>№Заяви</th>
+                    <th>Дата</th>
+                    <th>Замовник</th>
+                    <th>Причини Видачі ТУ</th>
+                    <th>Адреса</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
