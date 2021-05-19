@@ -1,0 +1,82 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #222222;
+}
+section {
+  background-image: url(img/Layer\ 2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 85vh;
+  max-width: 98%;
+  margin: 3% auto;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 30px 50px 0px black;
+  display: flex;
+}
+section .img_block {
+  width: 50%;
+  height: 100%;
+  padding: 55px 60px;
+  background-image: url('../img/Layer\ 2\ copy\ 5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section .img_block .img_wrapper {
+  display: flex;
+}
+section .img_block .img_wrapper .img_singer_block {
+  position: relative;
+}
+section .img_block .img_wrapper .img_singer_block img {
+  position: absolute;
+  left: -20px;
+  width: 160px;
+}
+@media (max-width: 1000px) {
+  section #textPorsche {
+    width: 200px;
+  }
+  section #layer {
+    width: 130px;
+  }
+}
+section .main_block_wrapper {
+  overflow: hidden;
+  flex: 1;
+  height: 100%;
+}
+section .main_block_wrapper .header_block {
+  position: relative;
+  width: 100%;
+  height: 15%;
+}
+section .main_block_wrapper .main_block {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+section .main_block_wrapper .main_block::after {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  bottom: 5px;
+  left: 0;
+  z-index: -1;
+  background-image: url(../img/Rectangle\ 1\ copy\ 2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section .main_block_wrapper .bottom_block {
+  height: 15%;
+  width: 100%;
+  background-color: #ff4f00;
+}
