@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: "Gill Sans", sans-serif;
 }
 body {
   background-color: #222222;
@@ -11,22 +12,22 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1200px;
   height: 85vh;
   max-width: 98%;
   margin: 3% auto;
   border-bottom: 2px solid black;
   box-shadow: 5px 30px 50px 0px black;
   display: flex;
+  flex-wrap: wrap;
 }
 section .img_block {
-  width: 50%;
   height: 100%;
   padding: 55px 60px;
   background-image: url('../img/Layer\ 2\ copy\ 5.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex: 1;
 }
 section .img_block .img_wrapper {
   display: flex;
@@ -55,25 +56,103 @@ section .main_block_wrapper {
 section .main_block_wrapper .header_block {
   position: relative;
   width: 100%;
-  height: 15%;
+  height: 10%;
+  padding: 20px;
+}
+section .main_block_wrapper .header_block .header_button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+section .main_block_wrapper .header_block .header_button img {
+  margin: 0 25px;
+}
+@media (max-width: 1000px) {
+  section .main_block_wrapper .header_block .header_button img {
+    width: 20px;
+    margin: 0 15px;
+  }
+  section .main_block_wrapper .header_block .header_button img#menu_img {
+    width: 35px;
+  }
 }
 section .main_block_wrapper .main_block {
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 75%;
+  padding: 0px 40px;
+}
+section .main_block_wrapper .main_block .prosche_singer_img {
+  padding: 0px 70px ;
+}
+@media (max-width: 1000px) {
+  section .main_block_wrapper .main_block .prosche_singer_img {
+    padding: 0px 10px ;
+  }
+  section .main_block_wrapper .main_block .prosche_singer_img img {
+    width: 200px;
+  }
+}
+section .main_block_wrapper .main_block .title_text_block {
+  padding: 20px 50px;
+  max-width: 600px;
+  position: relative;
+}
+section .main_block_wrapper .main_block .title_text_block::before {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 8px;
+  height: 75%;
+  background-color: #ff4f00;
+  content: '';
+}
+section .main_block_wrapper .main_block .title_text_block p {
+  font-weight: 100;
+  font-family: system-ui;
+  color: white;
+  font-size: 60px;
+}
+section .main_block_wrapper .main_block .title_text_block p span {
+  font-weight: bold;
+}
+@media (max-width: 1500px) {
+  section .main_block_wrapper .main_block .title_text_block p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  section .main_block_wrapper .main_block .title_text_block p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 900px) {
+  section .main_block_wrapper .main_block .title_text_block p {
+    font-size: 30px;
+  }
 }
 section .main_block_wrapper .main_block::after {
   content: "";
   position: absolute;
   height: 300px;
   width: 100%;
-  bottom: 5px;
+  bottom: 0;
   left: 0;
   z-index: -1;
   background-image: url(../img/Rectangle\ 1\ copy\ 2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+section .main_block_wrapper .main_block .text_block {
+  padding: 10px 70px;
+  font-size: 20px;
+}
+section .main_block_wrapper .main_block .text_block p {
+  font-size: large;
+  line-height: 33px;
+  color: white;
+  font-family: revert;
 }
 section .main_block_wrapper .bottom_block {
   height: 15%;
